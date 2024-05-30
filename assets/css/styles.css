@@ -1,0 +1,50 @@
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+body {
+    background-image: url(/assets/img/image-28.png);
+    margin: 0;
+    padding: 0;
+  }
+header {
+    background-color: #000c7c;
+  }
+.upper-section {
+    background-color: #020d72;
+    color: azure;
+  }
+.logoCentral{
+    max-width: 200px;
+    justify-self: center;
+  }
+.logo{
+    max-width: 200px;
+    justify-self: center;
+  }
+
+/*ESTRUCTURA FOOTER*/
+.logoFooter{
+    width: 50%;
+    height: auto;
+    margin: 5% 25%;
+    justify-self: center;
+    align-self: center;
+  }
+  footer {
+    background-color: black;
+    color: #e6e6e6;
+    padding: 40px 0px;
+    font-size: x-large;
+  }
+  .ulFooter li a{
+    text-align: center;
+    padding: 10px 20px;
+    color: #ffffff;
+  }
+  .linkFooter{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    color: #ffffff;
+  }
+  /*===================*/
