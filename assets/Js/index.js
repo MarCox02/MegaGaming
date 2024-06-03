@@ -19,7 +19,7 @@ function getGames(){
         card.classList.add('card');
 
         const img = document.createElement('img');
-        img.src = "https://placehold.co/600x400/EEE/31343C";
+        img.src = `${games.imagen}`;
         img.alt = `Imagen de ${games.nombre}`;
         img.classList.add('card-img-top');
 
@@ -60,4 +60,64 @@ function getGames(){
 
     })
 }
+
+function getConsole(){
+
+    let consoleRow = document.getElementById("consoleRow");
+    
+    console.map(function(console){
+
+        const divCol = document.createElement('div');
+        divCol.classList.add('col-xl-3');
+        divCol.classList.add('col-lg-3');
+        divCol.classList.add('col-md-3');
+        divCol.classList.add('col-sm-3');
+        divCol.classList.add('col-xs-3');
+        divCol.classList.add('mt-2');
+        divCol.classList.add('mb-2');
+    
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        const img = document.createElement('img');
+        img.src = `${console.imagen}`;
+        img.alt = `Imagen de ${console.nombre}`;
+        img.classList.add('card-img-top');
+
+        const divBody = document.createElement('div');
+        divBody.classList.add('card-body');
+
+        const title = document.createElement('h5');
+        title.classList.add('cart-title');
+        title.textContent = `${console.nombre}`;
+
+        const subtitle = document.createElement('p');
+        subtitle.classList.add('card-text');
+        subtitle.textContent = `Creador: ${console.creadores} `;
+
+        
+        const subtitle3 = document.createElement('p');
+        subtitle3.classList.add('card-text');
+        subtitle3.textContent = `Precio: ${console.precio} `;
+
+        divBody.appendChild(title);
+        divBody.appendChild(subtitle);
+        divBody.appendChild(subtitle3);
+        card.appendChild(img);
+        card.appendChild(divBody);
+        
+
+        divCol.appendChild(card);
+
+        consoleRow.appendChild(divCol);
+
+
+
+
+
+    })
+}
+
+
 getGames()
+getConsole()
