@@ -37,12 +37,15 @@ function getGames(){
         const subtitle2 = document.createElement('p');
         subtitle2.classList.add('card-text');
         subtitle2.textContent = `${games.descripcion} `;
-            
+        
+        const subtitle3 = document.createElement('p');
+        subtitle3.classList.add('card-text');
+        subtitle3.textContent = `Precio: ${games.precio} `;
 
         divBody.appendChild(title);
         divBody.appendChild(subtitle);
         divBody.appendChild(subtitle2);
-
+        divBody.appendChild(subtitle3);
         card.appendChild(img);
         card.appendChild(divBody);
         
