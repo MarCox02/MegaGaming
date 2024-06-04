@@ -62,27 +62,45 @@ export const games = [
         "descripcion":"Recorre de inicio a fin un mundo ambientado en la mitologia Nordica, siguiendo los problemas y aventuras de Kratos y su hijo Atreus en busca de tratar con los mayores dioses de Midgard",
         "precio": 50000,
     },
+    {
+        "id":"g08",
+        "nombre": "EA Sports FC 24",
+        "imagen":"https://res.cloudinary.com/dmhjhzpwk/image/upload/v1717535935/imagen_2024-06-04_171852384_iuhey9.png",
+        "desarrolladores": "EA",
+        "genero":"Deportes Multijugador",
+        "descripcion":"EA Sports FC 24 es un videojuego de fútbol, desarrollado por EA, y publicado por EA Sports. Este juego marca la primera entrega de la serie EA Sports FC, tras la conclusión de la asociación de EA con FIFA.​​",
+        "precio": 50000,
+    },
+    {
+        "id":"g09",
+        "nombre": "Call of duty: Modern Warfare 3",
+        "imagen":"https://res.cloudinary.com/dmhjhzpwk/image/upload/v1717514781/carlosdutibase_elqbhp.jpg",
+        "desarrolladores": "Infinity ward",
+        "genero":"Shooter Multijugador",
+        "descripcion":"Ultima entrega de la aclamada saga Call of duty, con una gran variedad de modos de juego, despliegate para competir con miles de jugadores en linea o contra tus amigos en local",
+        "precio": 50000,
+    },
     
 ];
 export const console = [
     {
         "id":"c01",
         "nombre": "Xbox XS",
-        "imagen":"",
+        "imagen":"https://res.cloudinary.com/dmhjhzpwk/image/upload/v1717515769/xbox_drfhbj.webp",
         "creadores":"Microsoft",
         "precio":350000,
     },
     {
         "id":"c02",
         "nombre": "PlayStation 5",
-        "imagen":"",
+        "imagen":"https://res.cloudinary.com/dmhjhzpwk/image/upload/v1717515719/play5_qrp1us.jpg",
         "creadores":"Sony",
         "precio":500000,
     },
     {
         "id":"c03",
         "nombre": "Nintendo Switch",
-        "imagen":"",
+        "imagen":"https://res.cloudinary.com/dmhjhzpwk/image/upload/v1717515806/switch_csck0k.avif",
         "creadores":"Nintendo",
         "precio":300000,
     },
