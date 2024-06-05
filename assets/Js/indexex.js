@@ -1,5 +1,5 @@
 import { getGames } from "./getGames.js";	
-import { getConsolas } from "./GetConsoles.js";
+import { getConsolas } from "./getConsolas.js";
 
 //--------------------- JUEGOS ------------------------------
 const enviarDatos = (id, nombre, imagen, desarrolladores, genero, descripcion, precio) => {
@@ -136,7 +136,7 @@ const crearCardCon = (results = []) => {
 		card.appendChild(divBody);
 		divBody.appendChild(title);
 		divBody.appendChild(titlePrecio);
-		juegosRow.appendChild(divCol);
+		consolasRow.appendChild(divCol);
 	});
 }
 
@@ -152,6 +152,7 @@ getGames()
 	.then( (data) => {
 		crearCard(data);
 		console.log(data);
+		
 	})
 	.catch( (error) => {
 		console.log(`El error es: ${error}`);
