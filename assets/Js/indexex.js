@@ -1,6 +1,6 @@
-import { getGames } from "./GetGames";
+import { getGames } from "./getGames.js";	
 
-const enviarDatos = (id, nombre, genero, desarrollador, plataformas, precio, foto) => {
+const enviarDatos = (id, nombre, imagen, desarrolladores, genero, descripcion, precio) => {
 
 	const rutaArchivoHTML = ".../jogo.html";
 
@@ -10,23 +10,23 @@ const enviarDatos = (id, nombre, genero, desarrollador, plataformas, precio, fot
 			const parser = new DOMParser();
 			const doc = parser.parseFromString(html, "text/html");
 
-			const juegoFoto = doc.getElementById('foto');
-			juegoFoto.src = foto;
+			const gameImagen = doc.getElementById('imagen');
+			gameImagen.src = imagen;
 
-			const juegoNombre = doc.getElementById('nombre');
-			juegoNombre.textContent = `${nombre}`;
+			const gameNombre = doc.getElementById('nombre');
+			gameNombre.textContent = `${nombre}`;
 
-			const juegoGenero = doc.getElementById('genero');
-			juegoGenero.textContent = `Genero: ${genero}`;
+			const gameGenero = doc.getElementById('genero');
+			gameGenero.textContent = `Genero: ${genero}`;
 			
-			const juegoDesar = doc.getElementById('desarrollador');
-			juegoDesar.textContent = `Desarrollador: ${desarrollador}`;
+			const gameDev = doc.getElementById('desarrolladores');
+			gameDev.textContent = `Desarrolladores: ${desarrolladores}`;
 			
-			const juegoPlat = doc.getElementById('plataformas');
-			juegoPlat.textContent = `Plataformas: ${plataformas}`;
+			const gameDescripcion = doc.getElementById('descripcion');
+			gameDescripcion.textContent = `descripcion: ${descripcion}`;
 
-			const juegoPrecio = doc.getElementById('precio');
-			juegoPrecio.textContent = `Precio: $${precio.toLocaleString()}`;
+			const gamePrecio = doc.getElementById('precio');
+			gamePrecio.textContent = `Precio: $${precio.toLocaleString()}`;
 
 			const nuevoHTML = new XMLSerializer().serializeToString(doc);
 			document.body.innerHTML = nuevoHTML; // inyectar html de personaje.html al index.html para "mostrarlo por encima"
@@ -42,12 +42,12 @@ const crearCard = (results = []) => {
 
 	results.map( (result) => {
 		
-        const { id, nombre, genero, desarrollador, plataformas, precio, foto} = result;
+        const {id, nombre, imagen, desarrolladores, genero, descripcion, precio} = result;
 
 		const divCol = document.createElement("div");
-		divCol.classList.add("col-xl-3");
-		divCol.classList.add("col-lg-3");
-		divCol.classList.add("col-md-3");
+		divCol.classList.add("col-xl-4");
+		divCol.classList.add("col-lg-4");
+		divCol.classList.add("col-md-6");
 		divCol.classList.add("col-sm-12");
 		divCol.classList.add("col-xs-12");
 		divCol.classList.add("mt-2");
@@ -57,7 +57,7 @@ const crearCard = (results = []) => {
 		card.classList.add("card");
 
 		const image = document.createElement("img");
-        image.src = foto;
+        image.src = imagen;
         image.alt = `Imagen de: ${nombre}`;
         image.classList.add("card-img-top");
 
@@ -82,7 +82,7 @@ const crearCard = (results = []) => {
         btnVer.classList.add("btn-input");
         btnVer.textContent = "Ver detalles";
         btnVer.addEventListener("click",()=> {
-            enviarDatos(id, nombre, genero, desarrollador, plataformas, precio, foto);
+            enviarDatos(id, nombre, genero, desarrolladores, plataformas, precio, imagen);
         });
 
 		divCol.append(card);
