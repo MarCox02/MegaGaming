@@ -29,7 +29,7 @@ const enviarDatos = (id, nombre, imagen, desarrolladores, genero, descripcion, p
 			gamePrecio.textContent = `Precio: $${precio.toLocaleString()}`;
 
 			const nuevoHTML = new XMLSerializer().serializeToString(doc);
-			document.body.innerHTML = nuevoHTML; // inyectar html de personaje.html al index.html para "mostrarlo por encima"
+			document.body.innerHTML = nuevoHTML;
 		})
 		.catch((error) => {
 			console.log(`El error es: ${error}`);
@@ -74,6 +74,7 @@ const crearCard = (results = []) => {
 
 		const titlePrecio = document.createElement("p");
         titlePrecio.classList.add("card-text");
+		titlePrecio.classList.add("textoRojo");
         titlePrecio.textContent = `Precio: $${precio.toLocaleString()}`;
 
         const btnVer = document.createElement("button");
