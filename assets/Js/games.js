@@ -105,26 +105,3 @@ export const console = [
         "precio":300000,
     },
 ];
-export const accesories = [
-    {
-        "id":"a01",
-        "nombre": "Control Xbox Xs",
-        "imagen":"",
-        "consola":"Xbox",
-        "precio":40000,
-    },
-    {
-        "id":"a02",
-        "nombre": "Control PlayStation 5",
-        "imagen":"",
-        "consola":"PlayStation 5",
-        "precio":40000,
-    },
-    {
-        "id":"a03",
-        "nombre": "Joycon Nintendo Switch",
-        "imagen":"",
-        "consola":"Nintendo Switch",
-        "precio":40000,
-    },
-];
